@@ -1,0 +1,6 @@
+<button [wbRouterLink]="['/demo-detail', 100]">Open detail 100</button>
+<ul>
+  <li *ngFor="let id of ids">
+    <a [wbRouterLink]="['/demo-detail', id]">Open detail {{id}}</a>
+  </li>
+</ul>

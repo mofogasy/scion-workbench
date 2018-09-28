@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'wb-icon';
-  src:  url('fonts/wb-icon.eot?l1rqeo');
-  src:  url('fonts/wb-icon.eot?l1rqeo#iefix') format('embedded-opentype'),
-    url('fonts/wb-icon.ttf?l1rqeo') format('truetype'),
-    url('fonts/wb-icon.woff?l1rqeo') format('woff'),
-    url('fonts/wb-icon.svg?l1rqeo#wb-icon') format('svg');
+  src:  url('fonts/wb-icon.eot?3v246r');
+  src:  url('fonts/wb-icon.eot?3v246r#iefix') format('embedded-opentype'),
+    url('fonts/wb-icon.ttf?3v246r') format('truetype'),
+    url('fonts/wb-icon.woff?3v246r') format('woff'),
+    url('fonts/wb-icon.svg?3v246r#wb-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,4 +35,16 @@
 }
 .wb-icon-edit:before {
   content: '\e254';
+}
+.wb-icon-enlarge:before {
+  content: '\e901';
+}
+.wb-icon-shrink:before {
+  content: '\e902';
+}
+.wb-icon-enlarge2:before {
+  content: '\e903';
+}
+.wb-icon-shrink2:before {
+  content: '\e904';
 }
