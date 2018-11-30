@@ -7,6 +7,7 @@ import { DemoDetailComponent } from './demo-detail/demo-detail.component';
 import {WorkbenchModule} from '../../../scion/workbench/src/lib/workbench.module';
 import {RouterModule, Routes} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'demo-list', component: DemoListComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
     WorkbenchModule.forRoot()
   ],
   exports: [RouterModule],
