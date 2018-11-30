@@ -12,6 +12,7 @@ import { Component, HostBinding, ViewChild, ViewContainerRef } from '@angular/co
 import { WorkbenchLayoutService } from './workbench-layout.service';
 import { OverlayHostRef } from './overlay-host-ref.service';
 import { ContentHostRef } from './content-projection/content-host-ref.service';
+import { FullScreenService } from './full-screen-view/full-screen.service';
 
 @Component({
   selector: 'wb-workbench',
@@ -35,8 +36,13 @@ export class WorkbenchComponent {
     return this._workbenchLayout.maximized;
   }
 
+  public get fullScreen(): boolean {
+    return this._fullScreen.active;
+  }
+
   constructor(private _workbenchLayout: WorkbenchLayoutService,
               private _overlayHostRef: OverlayHostRef,
-              private _contentHostRef: ContentHostRef) {
+              private _contentHostRef: ContentHostRef,
+              private _fullScreen: FullScreenService) {
   }
 }
