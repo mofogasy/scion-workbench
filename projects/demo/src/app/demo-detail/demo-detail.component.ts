@@ -8,11 +8,14 @@ import {WorkbenchView} from '../../../../scion/workbench/src/lib/workbench.model
 })
 export class DemoDetailComponent {
 
+  randomNumber;
+
   constructor(private view: WorkbenchView) {
     let name = '';
     for (let i = 0; i < (Math.floor(Math.random() * 10) + 1); i++) {
       name += '_';
     }
     this.view.title = 'Some title ' + name + (Math.floor(Math.random() * 1000));
+    this.randomNumber = Math.random() * 1000000;
   }
 }
