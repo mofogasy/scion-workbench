@@ -1,26 +1,40 @@
+@import '../workbench.constants';
+
 :host {
   display: flex;
   flex-direction: column;
 
   > sci-viewport {
-    width: 100%;
 
     &.tab-bar {
-      height: 50px;
+      flex: none;
+      height: $fullscreen_tabbar-height;
+      background-color: $fullscreen_tabbar-bgcolor;
+      color: $fullscreen_tab-fgcolor;
+      margin-right: 25px;
 
-      div.tabs {
-        flex-direction: row;
-        border: 1px solid green;
+      div.viewport-client {
+        display: flex;
+        flex: auto;
+        align-content: stretch;
 
-        div.tab {
-          display: inline-flex;
-          border: 1px solid darkred;
+        > div.tab {
+          padding: 5px;
+          white-space: nowrap;
+          border-right: 1px solid $fullscreen_tabbar_separator-color;
+          cursor: pointer;
+
+          &.active {
+            background-color: $fullscreen_tab-active-bgcolor;
+            color: $fullscreen_tab-active-fgcolor;
+            cursor: default;
+          }
         }
       }
     }
 
     &.full-screen-content {
-      height: 100%;
+      flex: auto;
     }
   }
 
@@ -33,7 +47,7 @@
     font-size: 1em;
     position: absolute;
     right: 2px;
-    bottom: 16px;
+    top: 2px;
     color: inherit;
 
     &::before {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { FullScreenService } from './full-screen.service';
 import { WorkbenchViewRegistry } from '../workbench-view-registry.service';
 import { InternalWorkbenchView } from '../workbench.model';
@@ -28,6 +28,10 @@ export class FullScreenViewComponent implements AfterViewInit {
       filter(activate => activate),
       take(1)
     ).subscribe(() => this.changeView(this._fullScreen.view));
+  }
+
+  public isActive(view: InternalWorkbenchView): boolean {
+    return this._currentView && this._currentView === view;
   }
 
   public closeFullScreen(): void {
