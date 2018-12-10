@@ -24,7 +24,7 @@ export class DemoDetailComponent {
     const params = (new HttpParams())
       .set('type', 'meat-and-filler')
       .set('start-with-lorem', '1')
-      .set('paras', '15');
+      .set('paras', '25');
 
     this._http.get<any[]>('https://baconipsum.com/api/', {params: params})
       .subscribe(result => this.loremIpsumParagraphs = result);

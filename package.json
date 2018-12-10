@@ -13,6 +13,7 @@
   },
   "scripts": {
     "ng": "ng",
+    "start-demo": "ng serve --project demo",
     "build": "npm run build-mouse-dispatcher && npm run build-dimension && npm run build-viewport && npm run build-workbench",
     "build-workbench": "ng build --prod @scion/workbench && cp -r projects/scion/workbench/src/theme/** dist/scion/workbench",
     "build-mouse-dispatcher": "ng build --prod @scion/mouse-dispatcher",
